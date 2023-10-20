@@ -38,7 +38,7 @@ a{text-decoration: none;color: inherit;}
     border-bottom: 1px solid #fff;
     transition: all .1s ease-in-out;
 }
-.footer__link{border-bottom: 1px solid #000000;}
+.footer__link{border-bottom: 1px solid #121723;}
 
 .header__link:hover, .footer__link:hover {
     border-bottom: 1px solid;
