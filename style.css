@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 26px;
+
+    background-color: #F1F1F1;
+}
+
+p, h1, h2, h3, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+a{text-decoration: none;color: inherit;}
+.container {
+    margin: 0 auto;
+    max-width: 1160px;
+    width: 100%;
+}
+
+.header {
+    padding: 30px 0 20px 0;
+    background-color: #fff;
+    margin-bottom: 25px;
+}
+
+.header__nav, .footer__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__link{
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fff;
+    transition: all .1s ease-in-out;
+}
+.footer__link{border-bottom: 1px solid #000000;}
+
+.header__link:hover, .footer__link:hover {
+    border-bottom: 1px solid;
+}
+.header__link:active, .footer__link:active{
+    transform: scale(.9);
+}
+
+
+.subtitle{
+    font-size: 48px;
+    font-weight: 500;
+    font-family: 'IBM Plex Mono', monospace;
+
+    margin-bottom: 24px;
+}
+
+.social{
+    display: flex;
+    gap: 24px;
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.logo {
+    color: #000;
+    font-family: 'Russo One', sans-serif;
+    font-size: 42px;
+    font-weight: 900;
+
+    text-transform: uppercase;
+}
+
+.cards {
+    margin-bottom: 24px;
+}
+.cards__card {
+    max-width: 371px;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+.cards__card:hover{
+    transform: scale(1.03);
+}
+.cards__wrapper{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 23px;
+}
+
+.cards__text {
+    padding: 32px 24px;
+    background-color: #fff;
+
+    border-radius: 0 0 12px 12px;
+}
+
+.cards__title{
+    font-size: 26px;
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+.cards__desc{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.footer {
+    background-color: #121723;
+    overflow: hidden;
+}
+
+.footer .footer__logo {
+    font-size: 31px;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.footer__nav{
+    padding: 31px 0;
+}
+
+.footer .social {
+    color: #fff;
+}
+
+.footer__line {
+    background-color: #E6E8EC66;
+    height: 1px;
+    width: 100%;
+    font-size: 0;
+
+    margin-bottom: 18px;
+}
+
+.footer__text {
+    color: #A1A6B4;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    
+    margin-bottom: 21px;
+}
