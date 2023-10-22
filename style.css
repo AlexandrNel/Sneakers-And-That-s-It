@@ -2,13 +2,13 @@ body {
     margin: 0;
     padding: 0;
 
-    box-sizing: border-box;
-
     font-family: 'Anonymous Pro', monospace;
     font-size: 26px;
 
     background-color: #F1F1F1;
 }
+
+*{box-sizing: border-box;}
 
 p, h1, h2, h3, h3 {
     margin: 0;
