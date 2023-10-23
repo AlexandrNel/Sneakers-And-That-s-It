@@ -226,10 +226,10 @@ a{text-decoration: none;color: inherit;}
     .social-links {
         gap: 10px;
     }
-    .header__link{
+    .header__link, .subtitle{
         display: none;
     }
-    .burger-menu{
+    .burger-menu, .subtitle__two{
         display: block;
     }
     .cards__title{
@@ -237,12 +237,6 @@ a{text-decoration: none;color: inherit;}
     }
     .cards__desc{
         font-size: 18px;
-    }
-    .subtitle{
-        display: none;
-    }
-    .subtitle__two{
-        display: block;
     }
     .cards__card {
         width: 48%;
@@ -263,14 +257,11 @@ a{text-decoration: none;color: inherit;}
     .subtitle__two{
         font-size: 24px;
     }
-    .social-links {
+    .social-links, .cards__desc {
         font-size: 14px;
     }
     .cards__title{
         font-size: 16px;
-    }
-    .cards__desc{
-        font-size: 14px;
     }
     .cards__text{
         padding: 18px 24px;
