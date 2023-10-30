@@ -25,9 +25,9 @@ ul {
 a{text-decoration: none;color: inherit; display: inline-block;}
 .container {
     margin: 0 auto;
-    max-width: 1188px;
     width: 100%;
-    padding: 0 14px;
+    max-width: 1224px;
+    padding: 0 32px;
 }
 
 .subtitle__two{
@@ -128,10 +128,25 @@ a{text-decoration: none;color: inherit; display: inline-block;}
     border-radius: 12px;
     display: flex;
     flex-direction: column;
-    transition: all .2s ease-in-out;
+    transition: all .1s ease-in-out;
     cursor: pointer;
+    position: relative;
 }
-.sneaker:hover{
+.sneaker::before {
+    background-color: #ffffff;
+    border-radius: 12px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    transition: all .1s ease-in-out;
+}
+.sneaker:hover::before {
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
     transform: scale(1.03);
 }
 .cards__wrapper{
@@ -191,48 +206,40 @@ a{text-decoration: none;color: inherit; display: inline-block;}
 
 /* MEDIA */
 
-@media screen and (max-width: 960px){
+@media screen and (max-width: 768px){
+    .container {
+        max-width: 1208px;
+        padding: 0 24px;
+    }
 
-    .footer__nav, .header{
-        padding: 13px 0;
-    }
-    .footer__line, .footer__text{
-        margin-bottom: 6px;
-    }
-    .social-links {
-        gap: 10px;
-    }
-    .header__link, .subtitle{
-        display: none;
-    }
-    .burger-menu, .subtitle__two{
-        display: block;
-    }
-    .cards__title{
-        font-size: 20px;
-    }
-    .cards__desc{
-        font-size: 18px;
-    }
-    .sneaker{
-        width: calc(50% - (23px / 2));
+    .sneaker {
+    width: calc(50% - (24px / 2));
+}
+    .subtitle {
+        font-size: 42px;
     }
 }
-@media screen and (max-width: 737px){
-    .footer__text {
-        font-size: 10px;
+@media screen and (max-width: 375px){
+    .container {
+        max-width: 1192px;
+        padding: 0 16px;
     }
-    .subtitle__two{
-        font-size: 24px;
+
+    .sneaker {
+    width: 100%;
+}
+    .subtitle {
+        font-size: 32px;
     }
-    .social-links, .cards__desc {
-        font-size: 14px;
+
+    .header__nav, .footer__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
     }
-    .cards__title{
-        font-size: 16px;
-    }
-    .cards__text{
-        padding: 18px 24px;
+    .footer__nav {
+        gap: 32px;
     }
 }
 /* MEDIA */
