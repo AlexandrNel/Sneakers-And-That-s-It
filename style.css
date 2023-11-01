@@ -1,8 +1,5 @@
 /* BASE */
 
-html {
-  height: 100%;
-}
 
 * {
   margin: 0;
@@ -14,9 +11,6 @@ body {
   font-family: "Anonymous Pro", monospace;
   font-size: 26px;
   background-color: #f1f1f1;
-  min-height: 100%;
-  display: grid;
-    grid-template-rows: auto 1fr auto;
 }
 
 
