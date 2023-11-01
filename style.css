@@ -1,13 +1,13 @@
 /* BASE */
 
-body{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .main {
-    flex: 1;
+  flex: 1;
 }
 
 * {
@@ -21,7 +21,6 @@ body {
   font-size: 26px;
   background-color: #f1f1f1;
 }
-
 
 ul {
   list-style-type: none;
@@ -211,21 +210,20 @@ a {
 
 /* FOOTER END ============================ */
 
-
 /* PAGE OF SNEAKER START ======================= */
 
 .sneaker-big {
-    padding: 48px;
-    background-color: #fff;
-    border-radius: 50px;
-    margin: 7px 0 32px 0;
+  padding: 48px;
+  background-color: #fff;
+  border-radius: 50px;
+  margin: 7px 0 32px 0;
 }
 .sneaker-big__img {
-    margin-bottom: 32px;
-    text-align: center;
+  margin-bottom: 32px;
+  text-align: center;
 }
 .sneaker-big__img img {
-    width: 100%;
+  width: 100%;
 }
 /* .sneaker-big__info {
     
@@ -236,50 +234,50 @@ a {
   font-weight: 400;
 }
 .sneaker-big__subtitle {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
   font-size: 36px;
   font-weight: 400;
 }
 .sneaker-big__additional-info {
-    font-size: 20px;
-    font-weight: 400;
-    display: flex;
-    gap: 32px;
+  font-size: 20px;
+  font-weight: 400;
+  display: flex;
+  gap: 32px;
 }
 .sneaker-big__text {
-    line-height: 28px;
-    max-width: 516px;
+  line-height: 28px;
+  max-width: 516px;
 }
 /* .sneaker-big__text p{
     
 } */
 .sneaker-big__parameters {
-    flex: 1;
-    min-width: 246px;
+  flex: 1;
+  min-width: 246px;
 }
 .sneaker-big__parameters-title {
-    font-size: 30px;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    font-weight: 400;
+  font-size: 30px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  font-weight: 400;
 }
 .sneaker-big__parameter-title p {
 }
 .sneaker-big__parameter-info {
-    border-bottom: 1px solid #121723;
-    display: flex;
-    gap: 15px;
-    justify-content: space-between;
+  border-bottom: 1px solid #121723;
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
 }
-.sneaker-big__parameter-info p:last-child{
-    text-align: right;
+.sneaker-big__parameter-info p:last-child {
+  text-align: right;
 }
 .sneaker-big__parameter-info:not(:last-child) {
-    margin-bottom: 20px;
-    padding-bottom: 24px;
+  margin-bottom: 20px;
+  padding-bottom: 24px;
 }
 .sneaker-big__parameter-info:last-child {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 /* PAGE OF SNEAKER ======================= */
@@ -300,15 +298,15 @@ a {
   }
 }
 @media screen and (max-width: 860px) {
- .sneaker-big__additional-info{
+  .sneaker-big__additional-info {
     flex-direction: column;
- }
- .sneaker-big__text{
+  }
+  .sneaker-big__text {
     max-width: unset;
- }
+  }
 }
 @media screen and (max-width: 546px) {
-.header__nav,
+  .header__nav,
   .footer__nav {
     flex-direction: column;
     gap: 24px;
@@ -346,16 +344,16 @@ a {
     font-size: 20px;
   }
   .sneaker-big__additional-info {
-      font-size: 16px;
+    font-size: 16px;
   }
   .sneaker-big__text {
-      line-height: 24px;
+    line-height: 24px;
   }
   /* .sneaker-big__text p{
       
   } */
   .sneaker-big__parameters-title {
-      font-size: 24px;
+    font-size: 24px;
   }
 }
 /* MEDIA */
