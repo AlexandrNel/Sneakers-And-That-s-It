@@ -233,7 +233,7 @@ a {
     
 } */
 .sneaker-big__title {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
   font-size: 48px;
   font-weight: 400;
 }
@@ -250,7 +250,6 @@ a {
 }
 .sneaker-big__text {
     line-height: 28px;
-    flex-shrink: 1;
     max-width: 516px;
 }
 /* .sneaker-big__text p{
@@ -301,14 +300,32 @@ a {
     font-size: 42px;
   }
 }
+@media screen and (max-width: 860px) {
+ .sneaker-big__additional-info{
+    flex-direction: column;
+ }
+ .sneaker-big__text{
+    max-width: unset;
+ }
+}
+@media screen and (max-width: 546px) {
+.header__nav,
+  .footer__nav {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+  .sneaker {
+    width: 100%;
+  }
+  .sneaker-big {
+    padding: 24px;
+  }
+}
 @media screen and (max-width: 375px) {
   .container {
     max-width: 1192px;
     padding: 0 16px;
-  }
-
-  .sneaker {
-    width: 100%;
   }
   .subtitle {
     font-size: 32px;
@@ -316,13 +333,30 @@ a {
 
   .header__nav,
   .footer__nav {
-    display: flex;
     flex-direction: column;
     gap: 24px;
     align-items: center;
   }
   .footer__nav {
     gap: 32px;
+  }
+  .sneaker-big__title {
+    font-size: 32px;
+  }
+  .sneaker-big__subtitle {
+    font-size: 20px;
+  }
+  .sneaker-big__additional-info {
+      font-size: 16px;
+  }
+  .sneaker-big__text {
+      line-height: 24px;
+  }
+  /* .sneaker-big__text p{
+      
+  } */
+  .sneaker-big__parameters-title {
+      font-size: 24px;
   }
 }
 /* MEDIA */
