@@ -1,245 +1,322 @@
 /* BASE */
 
 html {
-    height: 100%;
+  height: 100%;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Anonymous Pro', monospace;
-    font-size: 26px;
-    background-color: #F1F1F1;
-    min-height: 100%;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+  font-family: "Anonymous Pro", monospace;
+  font-size: 26px;
+  background-color: #f1f1f1;
+  min-height: 100%;
+  /* display: grid;
+    grid-template-rows: auto 1fr auto; */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+.main {
+  flex: 1;
+}
+
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
-a{text-decoration: none;color: inherit; display: inline-block;}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
 .container {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1224px;
-    padding: 0 32px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1224px;
+  padding: 0 32px;
 }
 
-.subtitle__two{
-    display: none;
-    font-size: 48px;
-    font-weight: 500;
-    font-family: 'IBM Plex Mono', monospace;
-    margin-bottom: 24px;
+.subtitle__two {
+  display: none;
+  font-size: 48px;
+  font-weight: 500;
+  font-family: "IBM Plex Mono", monospace;
+  margin-bottom: 24px;
 }
-.social-links{
-    display: flex;
-    gap: 24px;
-    color: #000;
-    font-size: 20px;
-    font-weight: 700;
+.social-links {
+  display: flex;
+  gap: 24px;
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
 }
-.subtitle{
-    font-size: 48px;
-    font-weight: 500;
-    font-family: 'IBM Plex Mono', monospace;
-    margin-bottom: 24px;
+.subtitle {
+  font-size: 48px;
+  font-weight: 500;
+  font-family: "IBM Plex Mono", monospace;
+  margin-bottom: 24px;
 }
 /* BASE */
 
-
-
 /* BURGER MENU START*/
 
-.burger-menu{
-    cursor: pointer;
-    display:none;
-    height: 30px;
+.burger-menu {
+  cursor: pointer;
+  display: none;
+  height: 30px;
 }
-.burger__line{
-    display: inline-block;
-    width: 55px;
-    height: 2px;
-    background-color: #000;
-    position: relative;
-    transition: all .3s ease-in-out;
+.burger__line {
+  display: inline-block;
+  width: 55px;
+  height: 2px;
+  background-color: #000;
+  position: relative;
+  transition: all 0.3s ease-in-out;
 }
-.burger__line::after, .burger__line::before {
-    content: '';
-    width: 55px;
-    height: 2px;
-    background-color: #000;
-    position: absolute;
-    transition: all .3s ease-in-out;
+.burger__line::after,
+.burger__line::before {
+  content: "";
+  width: 55px;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
 }
-.burger__line::after{
-    top: 10px;
+.burger__line::after {
+  top: 10px;
 }
-.burger__line::before{
-    bottom: 10px;
+.burger__line::before {
+  bottom: 10px;
 }
 
 /* BURGER MENU END =============================*/
 
-
-
 /* HEADER START ================================ */
 .header {
-    padding: 30px 0 20px 0;
-    background-color: #fff;
-    margin-bottom: 25px;
-    border-bottom: 1px solid #A1A6B4;
+  padding: 30px 0 20px 0;
+  background-color: #fff;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #a1a6b4;
 }
-.header__nav, .footer__nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.header__nav,
+.footer__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.header__link{
-    padding-bottom: 5px;
-    border-bottom: 1px solid #fff;
-    transition: all .1s ease-in-out;
+.header__link {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #fff;
+  transition: all 0.1s ease-in-out;
 }
-.footer__link{border-bottom: 1px solid #121723;}
+.footer__link {
+  border-bottom: 1px solid #121723;
+}
 
-.header__link:hover, .footer__link:hover {
-    border-bottom: 1px solid;
+.header__link:hover,
+.footer__link:hover {
+  border-bottom: 1px solid;
 }
-.header__link:active, .footer__link:active{
-    transform: scale(.9);
+.header__link:active,
+.footer__link:active {
+  transform: scale(0.9);
 }
 
 /* HEADER END ========================== */
 
-
-
 /* CARDS START ============================ */
 
 .cards {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 .sneaker {
-    width: calc(33.3333% - ((23px * 2) / 3));
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    transition: all .1s ease-in-out;
-    cursor: pointer;
-    position: relative;
+  width: calc(33.3333% - ((23px * 2) / 3));
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  position: relative;
 }
 .sneaker::before {
-    background-color: #ffffff;
-    border-radius: 12px;
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    transition: all .1s ease-in-out;
+  background-color: #ffffff;
+  border-radius: 12px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  transition: all 0.1s ease-in-out;
 }
 .sneaker:hover::before {
-    -webkit-transform: scale(1.03);
-    -ms-transform: scale(1.03);
-    transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
 }
-.cards__wrapper{
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 23px;
+.cards__wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 23px;
 }
 .cards__text {
-    padding: 32px 24px;
-    background-color: #fff;
-    border-radius: 0 0 12px 12px;
+  padding: 32px 24px;
+  background-color: #fff;
+  border-radius: 0 0 12px 12px;
 }
-.cards__title{
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 10px;
+.cards__title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
-.cards__desc{
-    font-size: 20px;
-    font-weight: 400;
+.cards__desc {
+  font-size: 20px;
+  font-weight: 400;
 }
 
 /* CARDS END ============================== */
 
-
 /* FOOTER START ============================== */
 
 .footer {
-    background-color: #121723;
-    overflow: hidden;
+  background-color: #121723;
+  overflow: hidden;
 }
-.footer__nav{
-    padding: 31px 0;
+.footer__nav {
+  padding: 31px 0;
 }
 .footer .social-links {
-    color: #fff;
+  color: #fff;
 }
 .footer__line {
-    background-color: #E6E8EC66;
-    height: 1px;
-    width: 100%;
-    font-size: 0;
-    margin-bottom: 18px;
+  background-color: #e6e8ec66;
+  height: 1px;
+  width: 100%;
+  font-size: 0;
+  margin-bottom: 18px;
 }
 .footer__text {
-    color: #A1A6B4;
-    font-size: 16px;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 21px;
+  color: #a1a6b4;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 21px;
 }
 
 /* FOOTER END ============================ */
 
-
 /* MEDIA */
 
-@media screen and (max-width: 768px){
-    .container {
-        max-width: 1208px;
-        padding: 0 24px;
-    }
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 1208px;
+    padding: 0 24px;
+  }
 
-    .sneaker {
+  .sneaker {
     width: calc(50% - (24px / 2));
+  }
+  .subtitle {
+    font-size: 42px;
+  }
 }
-    .subtitle {
-        font-size: 42px;
-    }
-}
-@media screen and (max-width: 375px){
-    .container {
-        max-width: 1192px;
-        padding: 0 16px;
-    }
+@media screen and (max-width: 375px) {
+  .container {
+    max-width: 1192px;
+    padding: 0 16px;
+  }
 
-    .sneaker {
+  .sneaker {
     width: 100%;
-}
-    .subtitle {
-        font-size: 32px;
-    }
+  }
+  .subtitle {
+    font-size: 32px;
+  }
 
-    .header__nav, .footer__nav {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        align-items: center;
-    }
-    .footer__nav {
-        gap: 32px;
-    }
+  .header__nav,
+  .footer__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+  .footer__nav {
+    gap: 32px;
+  }
 }
 /* MEDIA */
+
+/* PAGE OF SNEAKER START ======================= */
+
+.sneaker-big {
+  padding: 48px;
+  background-color: #fff;
+  border-radius: 50px;
+  margin: 7px 0 32px 0;
+}
+.sneaker-big__img {
+    margin-bottom: 32px;
+    text-align: center;
+}
+.sneaker-big__img img {
+    width: 80%;
+}
+/* .sneaker-big__info {
+    
+} */
+.sneaker-big__title {
+  margin-bottom: 24px;
+  font-size: 48px;
+  font-weight: 400;
+}
+.sneaker-big__subtitle {
+  margin-bottom: 24px;
+  font-size: 36px;
+  font-weight: 400;
+}
+.sneaker-big__additional-info {
+  font-size: 20px;
+  font-weight: 400;
+  display: flex;
+  gap: 32px;
+}
+.sneaker-big__text {
+  line-height: 28px;
+  flex: 1;
+}
+/* .sneaker-big__text p{
+
+} */
+.sneaker-big__parameters {
+  flex: 1;
+}
+.sneaker-big__parameters-title {
+  font-size: 30px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  font-weight: 400;
+}
+.sneaker-big__parameter-title p {
+}
+.sneaker-big__parameter-info {
+  border-bottom: 1px solid #121723;
+  display: flex;
+  justify-content: space-between;
+}
+.sneaker-big__parameter-info:not(:last-child) {
+  margin-bottom: 20px;
+  padding-bottom: 24px;
+}
+.sneaker-big__parameter-info:last-child {
+  padding-bottom: 20px;
+}
+
+/* PAGE OF SNEAKER ======================= */
