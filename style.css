@@ -265,6 +265,7 @@ a {
 .sneaker-big__parameter-info {
     border-bottom: 1px solid #121723;
     display: flex;
+    gap: 15px;
     justify-content: space-between;
 }
 .sneaker-big__parameter-info p:last-child{
