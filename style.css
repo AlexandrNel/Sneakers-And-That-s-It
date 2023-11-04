@@ -47,6 +47,7 @@ a {
 }
 .social-links {
   display: flex;
+  flex-shrink: 0;
   gap: 24px;
   color: #000;
   font-size: 20px;
@@ -185,6 +186,9 @@ a {
 .footer {
   background-color: #121723;
   overflow: hidden;
+}
+.footer__logo img{
+  max-width: 100%;
 }
 .footer__nav {
   padding: 31px 0;
