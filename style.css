@@ -72,6 +72,19 @@ a {
 .love-cat img {
   width: 70px;
 }
+
+.cat{
+  width: 100px;
+  height: 100px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+.cat img{
+  width: 100%;
+}
+
 .secret-link {
   font-size: 20px;
   text-align: center;
@@ -146,6 +159,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 .header__link {
   padding-bottom: 5px;
@@ -406,6 +420,11 @@ a {
 
 /* MEDIA */
 
+@media screen and (max-width: 1024px) {
+  .cat {
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
   .container {
     max-width: 1208px;
