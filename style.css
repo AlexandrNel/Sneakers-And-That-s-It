@@ -180,18 +180,101 @@ a {
   transition: all 0.1s ease-in-out;
   cursor: pointer;
   position: relative;
+  background-color: #fff;
+  border-radius: 12px;
+  z-index: 1;
 }
+
+/* .sneaker:hover:nth-child(1).sneaker::after{
+  background-size: 400% 600%;
+}
+.sneaker:hover:nth-child(2).sneaker::after{
+  background-size: 400% 600%;
+}
+.sneaker:hover:nth-child(3).sneaker::after{
+  background-size: 400% 600%;
+} */
+
+.sneaker::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background: linear-gradient(45deg,#f1f1f1 50%, rgb(255, 136, 0)50%);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  background-size: 0;
+  z-index: -1;
+  border-radius: 13px;
+}
+.sneaker:nth-child(1)::after{
+  animation: borderGradientTo .5s 1s linear alternate, borderGradientFrom .5s 1.5s linear alternate;
+}
+.sneaker:nth-child(2)::after{
+  animation: borderGradientTo .5s 1.3s linear alternate, borderGradientFrom .5s 1.8s linear alternate;
+}
+.sneaker:nth-child(3)::after{
+  animation: borderGradientTo .5s 1.6s linear alternate, borderGradientFrom .5s 2.1s linear alternate;
+}
+
 .sneaker img {
   border-radius: 12px 12px 0 0;
 }
 
 .sneaker:hover {
-  transform: translateX(-3px) translateY(-3px);
-  box-shadow: 10px 10px 13px 0 rgba(0, 0, 0, 0.25);
+  transform: translate(0px, -10px);
+  box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .sneaker:active {
-  transform: translateX(-3px) translateY(-3px);
-  box-shadow: 10px 10px 13px 0 rgba(0, 0, 0, 0.1);
+  transform: translate(0px, -10px) scale(0.98);
+  box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.sneaker:nth-child(1){
+ animation: jump .3s 1s ease-out, down .5s 1.3s ;
+}
+.sneaker:nth-child(2){
+ animation: jump .3s 1.3s ease-out, down .5s 1.6s ;
+}
+.sneaker:nth-child(3) {
+ animation: jump .3s 1.6s ease-out, down .5s 1.9s ;
+}
+
+@keyframes jump {
+  from{
+    transform: translate(0px, 0px);
+    box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  to{
+    transform: translate(0px, -10px);
+    box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+}
+@keyframes down {
+  from{
+    transform: translate(0px, -10px);
+    box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  to{
+    transform: translate(0px, 0px);
+    box-shadow: 0;
+  }
+}
+@keyframes borderGradientTo{
+  from{
+    background-size: 400% 150%;
+  }
+  to{
+    background-size: 400% 600%;
+  }
+}
+@keyframes borderGradientFrom{
+  from{
+    background-size: 400% 600%;
+  }
+  to{
+    background-size: 400% 150%;
+  }
 }
 
 .cards__wrapper {
@@ -399,3 +482,5 @@ a {
   }
 }
 /* MEDIA */
+
+
