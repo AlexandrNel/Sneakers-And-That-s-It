@@ -318,13 +318,13 @@ a {
 
 .footer {
   background-color: #121723;
-  overflow: hidden;
 }
 .footer__logo img {
   max-width: 100%;
 }
 .footer__nav {
   padding: 31px 0;
+  border-bottom: 1px solid #676B73;
 }
 .footer .social-links {
   color: #fff;
@@ -342,7 +342,7 @@ a {
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 21px;
+  margin: 25px 0;
 }
 
 /* FOOTER END ============================ */
