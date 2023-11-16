@@ -233,7 +233,7 @@ a {
 
 .sneaker img {
   border-radius: 12px 12px 0 0;
-  margin-bottom: -0.5px;
+  margin-bottom: -0.8px;
 }
 
 .sneaker:nth-child(1):hover, .sneaker:nth-child(2):hover, .sneaker:nth-child(3):hover {
