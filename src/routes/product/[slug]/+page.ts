@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
-import { CARDS } from '../../../shared/consts/cards';
-import { generateSlug } from '../../../shared/utils/generateSlug';
+import { CARDS } from '../../../lib/consts/cards';
+import { generateSlug } from '../../../lib/utils/generateSlug';
 
 export const load: PageLoad = ({ params }) => {
     console.log(params);
