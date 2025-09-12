@@ -2,6 +2,7 @@
 	import './styles.css';
 	import { CARDS, type Card } from '$lib/consts/cards';
 	import { generateSlug } from '$lib/utils/generateSlug';
+	import Button from '$lib/components/Button/Button.svelte';
 </script>
 
 <div class="cards">
@@ -10,14 +11,20 @@
 		<h2 class="subtitle__two">🔥Популярные модели</h2>
 		<div >
 
-			{#snippet card({ title, desc, imgUrl }: Card)}
-				<a href="/product/{generateSlug(generateSlug(title))}" class="sneaker">
+			{#snippet card({ title, desc, imgUrl, additional }: Card)}
+			<div class="sneaker">
+				<a class="sneaker__link" href="/product/{generateSlug(generateSlug(title))}" >
 					<img src={imgUrl} alt={title} />
 					<div class="cards__text">
 						<h3 class="cards__title">{title}</h3>
-						<p class="cards__desc">{desc}</p>
+						<span class="cards__desc">{desc}</span>
 					</div>
 				</a>
+					<div class="cards__footer">
+						<span class="cards__price">{additional?.price}{additional?.currency}</span>
+						<Button className="font-bold">В корзину</Button>
+					</div>
+			</div>
 			{/snippet}
 
 			<ul class="card__list">
@@ -45,9 +52,9 @@
 		grid-template-columns: repeat(2, 1fr);
 	}
 	}
-	@media screen and (max-width: 470px) {
+	@media screen and (max-width: 425px) {
 		.card__list{
-		grid-template-columns: 1fr;
-	}
+			gap: 10px
+		}
 	}
 </style>

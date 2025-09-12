@@ -1,3 +1,6 @@
+:root {
+	--card-padding: 20px;
+}
 .cards {
 	margin-bottom: 24px;
 }
@@ -7,7 +10,6 @@
 	display: flex;
 	flex-direction: column;
 	transition: all 0.1s ease-in-out;
-	cursor: pointer;
 	position: relative;
 	background-color: #fff;
 	border-radius: 12px;
@@ -17,8 +19,9 @@
 .sneaker img {
 	border-radius: 12px 12px 0 0;
 	margin-bottom: -0.8px;
+	width: 60%;
+	margin: 0 auto;
 }
-
 .sneaker:hover {
 	transform: translate(0px, -10px);
 	box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -31,92 +34,45 @@
 	gap: 23px;
 }
 .cards__text {
-	padding: 32px 24px;
+	display: flex;
+	flex-direction: column;
+	padding: var(--card-padding);
+	line-height: normal;
+	padding-bottom: 10px;
 	background-color: #fff;
 	border-radius: 0 0 12px 12px;
 }
 .cards__title {
 	font-size: 26px;
 	font-weight: 700;
-	margin-bottom: 10px;
 }
 .cards__desc {
+	display: inline-block;
 	font-size: 20px;
 	font-weight: 400;
+}
+.cards__title:hover,
+.cards__desc:hover {
+	color: #14388f;
+}
+
+.cards__price {
+	display: inline-block;
+	font-size: 20px;
+	font-weight: 700;
+	color: #121723;
+}
+.cards__footer {
+	line-height: normal;
+	margin-top: auto;
+	padding: var(--card-padding);
+	padding-top: 0;
+	display: flex;
+	justify-items: center;
+	justify-content: space-between;
 }
 
 /* CARDS END ============================== */
-
-/* PAGE OF SNEAKER START ======================= */
-
-.sneaker-big {
-	padding: 48px;
-	background-color: #fff;
-	border-radius: 50px;
-	margin: 7px 0 32px 0;
-}
-.sneaker-big__img {
-	margin-bottom: 32px;
-	text-align: center;
-}
-.sneaker-big__img img {
-	width: 100%;
-}
-/* .sneaker-big__info {
-    
-} */
-.sneaker-big__title {
-	margin-bottom: 24px;
-	font-size: 48px;
-	font-weight: 400;
-}
-.sneaker-big__subtitle {
-	margin-bottom: 24px;
-	font-size: 36px;
-	font-weight: 400;
-}
-.sneaker-big__additional-info {
-	font-size: 20px;
-	font-weight: 400;
-	display: flex;
-	gap: 32px;
-}
-.sneaker-big__text {
-	line-height: 28px;
-	max-width: 516px;
-}
-.sneaker-big__text p:not(:last-child) {
-	margin-bottom: 20px;
-}
-.sneaker-big__parameters {
-	flex: 1;
-	min-width: 246px;
-}
-.sneaker-big__parameters-title {
-	font-size: 30px;
-	margin-bottom: 20px;
-	padding-bottom: 20px;
-	font-weight: 400;
-}
-
-.sneaker-big__parameter-info {
-	border-bottom: 1px solid #121723;
-	display: flex;
-	gap: 15px;
-	justify-content: space-between;
-}
-.sneaker-big__parameter-info p:last-child {
-	text-align: right;
-}
-.sneaker-big__parameter-info:not(:last-child) {
-	margin-bottom: 20px;
-	padding-bottom: 24px;
-}
-.sneaker-big__parameter-info:last-child {
-	padding-bottom: 20px;
-}
-
-/* PAGE OF SNEAKER ======================= */
 
 /* MEDIA */
 
@@ -126,9 +82,8 @@
 	}
 }
 @media screen and (max-width: 768px) {
-	.container {
-		max-width: 1208px;
-		padding: 0 24px;
+	:root {
+		--card-padding: 16px;
 	}
 	.subtitle {
 		font-size: 42px;
@@ -138,29 +93,23 @@
 		font-weight: 600;
 	}
 	.cards__text {
-		padding: 16px;
 		line-height: normal;
 	}
 }
 @media screen and (max-width: 768px) {
+	:root {
+		--card-padding: 12px;
+	}
 	.cards__title {
-		font-size: 18px;
-	}
-	.cards__text {
-		padding: 12px;
-	}
-	.cards__desc {
 		font-size: 16px;
+		margin-bottom: 0;
+	}
+
+	.cards__desc {
+		font-size: 14px;
 	}
 }
-@media screen and (max-width: 860px) {
-	.sneaker-big__additional-info {
-		flex-direction: column;
-	}
-	.sneaker-big__text {
-		max-width: unset;
-	}
-}
+
 @media screen and (max-width: 546px) {
 	.header__nav,
 	.footer__nav {
@@ -168,22 +117,17 @@
 		gap: 24px;
 		align-items: center;
 	}
-	.sneaker-big {
-		padding: 24px;
-	}
-	.sneaker-big {
-		border-radius: 12px;
+}
+@media screen and (max-width: 425px) {
+	.cards__price {
+		font-size: 16px;
 	}
 }
+
 @media screen and (max-width: 375px) {
-	.container {
-		max-width: 1192px;
-		padding: 0 16px;
-	}
 	.subtitle {
 		font-size: 32px;
 	}
-
 	.header__nav,
 	.footer__nav {
 		flex-direction: column;
@@ -192,24 +136,6 @@
 	}
 	.footer__nav {
 		gap: 32px;
-	}
-	.sneaker-big__title {
-		font-size: 32px;
-	}
-	.sneaker-big__subtitle {
-		font-size: 20px;
-	}
-	.sneaker-big__additional-info {
-		font-size: 16px;
-	}
-	.sneaker-big__text {
-		line-height: 24px;
-	}
-	/* .sneaker-big__text p{
-      
-  } */
-	.sneaker-big__parameters-title {
-		font-size: 24px;
 	}
 }
 /* MEDIA */
