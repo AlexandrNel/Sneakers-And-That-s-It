@@ -20,7 +20,11 @@
     }
     })
 </script>
-
+ <svelte:head>
+    <title>{data.title}</title>
+    <meta name="description" content={data.desc} />
+    <meta name="keywords" content="sneakers" />
+ </svelte:head>
  <div class="container">
             <div class="sneaker-big">
                 <div class="sneaker-big__img">
