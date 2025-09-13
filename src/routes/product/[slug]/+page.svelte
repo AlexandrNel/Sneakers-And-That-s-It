@@ -9,7 +9,7 @@
     let isHideButton = $state(false)
     let textBlock:HTMLDivElement
 
-    const handleOpenText = (e: Event)=>{
+    const handleOpenText = ()=>{
         isOpen = !isOpen
     }
 
@@ -36,9 +36,12 @@
                     <div class="sneaker-big__additional-info">
                         <div class="sneaker-big__text">
                             <div bind:this={textBlock} style="--max-height:{MAX_HEIGHT}px" class={isOpen ? 'open' : 'hide'}>
-                                {#each data.additional?.desc.split('\n') || [] as paragraph }
+                                {#if data.additional}
+                                     {#each data.additional.desc.split('\n') as paragraph}
                                 <p>{paragraph}</p>
                                 {/each}
+                                {/if}
+                               
                             </div>
                            {#if !isHideButton}
                             <button style="cursor:pointer; border-bottom:1px solid black" onclick={handleOpenText}>{isOpen ? "Скрыть" : "Показать полностью"}</button>
