@@ -1,4 +1,4 @@
-export interface Card {
+export interface ICard {
     title: string,
     desc: string,
     imgUrl: string,
@@ -20,7 +20,7 @@ import Card08 from '$lib/assets/img/sneakers/08.png'
 import Card09 from '$lib/assets/img/sneakers/09.png'
 import Card10 from '$lib/assets/img/sneakers/10.png'
 
-export const CARDS: Card[] = [
+export const CARDS: ICard[] = [
     {
         title: 'The New Balance C-ms574',
         desc: 'Salehe Bembury Shark Skin',
