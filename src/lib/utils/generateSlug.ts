@@ -1,3 +1,3 @@
 export function generateSlug(text: string) {
-    return text.toLowerCase().split(' ').join('-')
+	return text.toLowerCase().split(' ').join('-');
 }

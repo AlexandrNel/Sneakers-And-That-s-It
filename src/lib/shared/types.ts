@@ -1,3 +1,3 @@
 export type WithElementRef<T> = T & {
-    ref?: HTMLElement | null;
+	ref?: HTMLElement | null;
 };
