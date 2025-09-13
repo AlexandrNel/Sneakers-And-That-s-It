@@ -22,7 +22,7 @@
 				</a>
 					<div class="cards__footer">
 						<span class="cards__price">{additional?.price}{additional?.currency}</span>
-						<Button className="font-bold">В корзину</Button>
+						<Button class="font-bold">В корзину</Button>
 					</div>
 			</div>
 			{/snippet}
