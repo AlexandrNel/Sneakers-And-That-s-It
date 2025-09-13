@@ -1,4 +1,6 @@
-# sv
+# Открыть сайт - https://eloquent-stroopwafel-3efb98.netlify.app/ 
+
+## sv
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
