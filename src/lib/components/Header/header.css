@@ -1,0 +1,91 @@
+/* HEADER START ================================ */
+.header {
+	padding: 30px 0 20px 0;
+	background-color: #fff;
+	margin-bottom: 25px;
+	border-bottom: 1px solid #a1a6b4;
+}
+.header__nav,
+.footer__nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+}
+.header__link {
+	padding-bottom: 5px;
+	border-bottom: 1px solid #fff;
+	transition: all 0.1s ease-in-out;
+}
+.footer__link {
+	border-bottom: 1px solid #121723;
+}
+
+.header__link:hover,
+.footer__link:hover {
+	border-bottom: 1px solid;
+}
+.header__link:active,
+.footer__link:active {
+	transform: scale(0.9);
+}
+
+.header__logo {
+	position: relative;
+	&:hover .secret {
+		display: inline-block;
+	}
+}
+
+/* HEADER END ========================== */
+
+.burger-menu {
+	cursor: pointer;
+	display: none;
+	height: 30px;
+}
+.burger__line {
+	display: inline-block;
+	width: 55px;
+	height: 2px;
+	background-color: #000;
+	position: relative;
+	transition: all 0.3s ease-in-out;
+}
+.burger__line::after,
+.burger__line::before {
+	content: '';
+	width: 55px;
+	height: 2px;
+	background-color: #000;
+	position: absolute;
+	transition: all 0.3s ease-in-out;
+}
+.burger__line::after {
+	top: 10px;
+}
+.burger__line::before {
+	bottom: 10px;
+}
+
+/* CART */
+
+.cart {
+	position: relative;
+}
+.cart__count {
+	--size: 14px;
+	display: flex;
+	position: absolute;
+	top: calc(0px - var(--size) * 0.2);
+	right: calc(0px - var(--size) * 0.4);
+	width: var(--size);
+	height: var(--size);
+	border-radius: 50%;
+	background: #ff6262;
+	color: #fff;
+	font-size: 12px;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}

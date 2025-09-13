@@ -1,0 +1,141 @@
+:root {
+	--card-padding: 20px;
+}
+.cards {
+	margin-bottom: 24px;
+}
+.sneaker {
+	height: 100%;
+	border-radius: 12px;
+	display: flex;
+	flex-direction: column;
+	transition: all 0.1s ease-in-out;
+	position: relative;
+	background-color: #fff;
+	border-radius: 12px;
+	z-index: 1;
+}
+
+.sneaker img {
+	border-radius: 12px 12px 0 0;
+	margin-bottom: -0.8px;
+	width: 60%;
+	margin: 0 auto;
+}
+.sneaker:hover {
+	transform: translate(0px, -10px);
+	box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.cards__wrapper {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	gap: 23px;
+}
+.cards__text {
+	display: flex;
+	flex-direction: column;
+	padding: var(--card-padding);
+	line-height: normal;
+	padding-bottom: 10px;
+	background-color: #fff;
+	border-radius: 0 0 12px 12px;
+}
+.cards__title {
+	font-size: 26px;
+	font-weight: 700;
+}
+.cards__desc {
+	display: inline-block;
+	font-size: 20px;
+	font-weight: 400;
+}
+.cards__title:hover,
+.cards__desc:hover {
+	color: #14388f;
+}
+
+.cards__price {
+	display: inline-block;
+	font-size: 20px;
+	font-weight: 700;
+	color: #121723;
+}
+.cards__footer {
+	line-height: normal;
+	margin-top: auto;
+	padding: var(--card-padding);
+	padding-top: 0;
+	display: flex;
+	justify-items: center;
+	justify-content: space-between;
+}
+
+/* CARDS END ============================== */
+
+/* MEDIA */
+
+@media screen and (max-width: 1024px) {
+	.cat {
+		display: none;
+	}
+}
+@media screen and (max-width: 768px) {
+	:root {
+		--card-padding: 16px;
+	}
+	.subtitle {
+		font-size: 42px;
+	}
+	.cards__title {
+		font-size: 24px;
+		font-weight: 600;
+	}
+	.cards__text {
+		line-height: normal;
+	}
+}
+@media screen and (max-width: 768px) {
+	:root {
+		--card-padding: 12px;
+	}
+	.cards__title {
+		font-size: 16px;
+		margin-bottom: 0;
+	}
+
+	.cards__desc {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 546px) {
+	.header__nav,
+	.footer__nav {
+		flex-direction: column;
+		gap: 24px;
+		align-items: center;
+	}
+}
+@media screen and (max-width: 425px) {
+	.cards__price {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.subtitle {
+		font-size: 32px;
+	}
+	.header__nav,
+	.footer__nav {
+		flex-direction: column;
+		gap: 24px;
+		align-items: center;
+	}
+	.footer__nav {
+		gap: 32px;
+	}
+}
+/* MEDIA */
