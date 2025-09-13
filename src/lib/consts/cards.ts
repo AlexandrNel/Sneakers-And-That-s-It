@@ -1,4 +1,5 @@
 export interface ICard {
+    id: string
     title: string,
     desc: string,
     imgUrl: string,
@@ -22,6 +23,7 @@ import Card10 from '$lib/assets/img/sneakers/10.png'
 
 export const CARDS: ICard[] = [
     {
+        id: '1',
         title: 'The New Balance C-ms574',
         desc: 'Salehe Bembury Shark Skin',
         imgUrl: Card06,
@@ -34,18 +36,20 @@ export const CARDS: ICard[] = [
         }
     },
     {
+        id: '2',
         title: 'Nike Dunk Low SP',
         desc: 'Syracuse (2020/2022)',
         imgUrl: Card07,
         additional: {
-            desc: "Nike Dunk Low SP Syracuse — культовая модель, вдохновленная баскетбольной командой Syracuse University. Кроссовки выполнены из высококачественной кожи, сочетают белый и оранжевый цвета, что делает их яркими и узнаваемыми. Отличаются удобной посадкой и прочной подошвой, идеально подходят для повседневной носки и коллекционеров.",
-            price: 180,
+            desc: "Nike Dunk Low SP Syracuse — культовая модель, вдохновленная баскетбольной командой Syracuse University. Кроссовки выполнены из высококачественной кожи, сочетают белый и оранжевый цвета, что делает их яркими и узнаваемыми. Отличаются удобной посадкой и прочной подошвой, идеально подходят для повседневной носки и коллекционирования.",
+            price: 210,
             currency: "€",
             date: "15/03/2022",
             parameter: "Кожа, резина"
         }
     },
     {
+        id: '3',
         title: 'Converse Chuck 70 High',
         desc: 'Comme des Garcons PLAY Black',
         imgUrl: Card10,
@@ -58,6 +62,7 @@ export const CARDS: ICard[] = [
         }
     },
     {
+        id: '4',
         title: 'adidas Yeezy Foam RNNR',
         desc: 'Stone Sage',
         imgUrl: Card09,
@@ -70,6 +75,7 @@ export const CARDS: ICard[] = [
         }
     },
     {
+        id: '5',
         title: 'Nike Air Max Plus',
         desc: 'Patta FC Barcelona Culers del Món',
         imgUrl: Card01,
@@ -82,6 +88,7 @@ export const CARDS: ICard[] = [
         }
     },
     {
+        id: '6',
         title: 'Jordan 1 Retro High OG SP',
         desc: 'Union LA Bephies Beauty Supply Summer of ‘96',
         imgUrl: Card02,
@@ -94,6 +101,7 @@ export const CARDS: ICard[] = [
         }
     },
     {
+        id: '7',
         title: 'adidas Campus 00s',
         desc: 'Core Black',
         imgUrl: Card03,
@@ -106,6 +114,7 @@ export const CARDS: ICard[] = [
         }
     },
     {
+        id: '8',
         title: 'UGG Classic Ultra Mini Boot',
         desc: 'Chestnut (Women\'s)',
         imgUrl: Card05,
@@ -118,6 +127,7 @@ export const CARDS: ICard[] = [
         }
     },
     {
+        id: '9',
         title: 'Jordan 1 Retro Low Golf',
         desc: 'Travis Scott Neutral Olive',
         imgUrl: Card08,
