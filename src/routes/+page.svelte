@@ -1,8 +1,11 @@
 <script lang="ts">
 	import './styles.css';
-	import { CARDS, type Card } from '$lib/consts/cards';
-	import { generateSlug } from '$lib/utils/generateSlug';
-	import Button from '$lib/components/Button/Button.svelte';
+	import { CARDS } from '$lib/consts/cards';
+	import { addToCart, cashedDeleteByOne, getCountById } from '$lib/stores/cart.svelte';
+	import Card from './card.svelte';
+
+
+
 </script>
 
 <div class="cards">
@@ -11,26 +14,10 @@
 		<h2 class="subtitle__two">🔥Популярные модели</h2>
 		<div >
 
-			{#snippet card({ title, desc, imgUrl, additional }: Card)}
-			<div class="sneaker">
-				<a class="sneaker__link" href="/product/{generateSlug(generateSlug(title))}" >
-					<img src={imgUrl} alt={title} />
-					<div class="cards__text">
-						<h3 class="cards__title">{title}</h3>
-						<span class="cards__desc">{desc}</span>
-					</div>
-				</a>
-					<div class="cards__footer">
-						<span class="cards__price">{additional?.price}{additional?.currency}</span>
-						<Button class="font-bold">В корзину</Button>
-					</div>
-			</div>
-			{/snippet}
-
 			<ul class="card__list">
 				{#each CARDS as item}
 				<li class="card">
-					{@render card(item)}
+					<Card card={item} addToCart={addToCart} getCount={()=>getCountById(item.id)} deleteFromCart={()=>cashedDeleteByOne(item.id)} />
 				</li>
 				{/each}
 			</ul>

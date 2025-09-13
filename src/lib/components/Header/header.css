@@ -67,3 +67,25 @@
 .burger__line::before {
 	bottom: 10px;
 }
+
+/* CART */
+
+.cart {
+	position: relative;
+}
+.cart__count {
+	--size: 14px;
+	display: flex;
+	position: absolute;
+	top: calc(0px - var(--size) * 0.2);
+	right: calc(0px - var(--size) * 0.4);
+	width: var(--size);
+	height: var(--size);
+	border-radius: 50%;
+	background: #ff6262;
+	color: #fff;
+	font-size: 12px;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
