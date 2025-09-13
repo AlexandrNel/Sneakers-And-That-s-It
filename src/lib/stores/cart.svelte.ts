@@ -20,7 +20,10 @@ export function addToCart(product: ICard) {
     }
     cartStore.count += 1
 }
-
+export function setCartStore(c: typeof cartStore) {
+    cartStore.items = c.items
+    cartStore.count = c.count
+}
 export function getCountById(id: string) {
     return cartStore.items.find((p) => p.item.id === id)?.count ?? 0
 }

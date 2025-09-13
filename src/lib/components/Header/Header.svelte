@@ -3,8 +3,7 @@
     import Logo from '$lib/assets/img/logo-header.svg'
 	import Socials from '$lib/components/Socials/Socials.svelte';
     import CartSvg  from '$lib/assets/shopping-cart.svg'
-	import { cartStore } from '$lib/stores/cart.svelte';
-
+	import { cartStore} from '$lib/stores/cart.svelte';
 
 </script>
 
